@@ -1,0 +1,131 @@
+/* Custom Styles for Portfolio Site */
+
+/* CSS Variables for Light/Dark Mode */
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --accent-color: #1976d2;
+  --card-bg: #fff;
+  --section-bg: #f8f9fa;
+  --footer-bg: #000;
+  --footer-text: #fff;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --accent-color: #90caf9;
+  --card-bg: #1e1e1e;
+  --section-bg: #1e1e1e;
+  --footer-bg: #000;
+  --footer-text: #fff;
+}
+
+/* Global Styles */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.navbar-brand {
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: var(--text-color) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color) !important;
+}
+
+/* Dark Mode Toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--bg-color) 0%, #e3f2fd 100%);
+  color: var(--text-color);
+}
+
+.hero-section h1 {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.hero-section .lead {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: #1976d2;
+  border-color: #1976d2;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
+
+/* Sections */
+section {
+  padding: 5rem 0;
+}
+
+h2 {
+  font-weight: 100;
+  color: var(--text-color);
+}
+
+h3 {
+  font-weight: 100;
+  color: var(--accent-color);
+}
+
+/* Cards */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}
