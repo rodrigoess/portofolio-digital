@@ -3,172 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofólio Digital - Rodrigo Silva</title>
-    <!-- Bootstrap CSS -->
+    <title>Rodrigo Silva</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Google Fonts: Lato -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#about">Rodrigo Silva</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Sobre Mim</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experiência</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projetos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <button id="theme-toggle" class="ms-3">🌙</button>
-            </li>
-          </ul>
+    <!-- Header with Social Links -->
+    <header class="header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="social-links">
+          <a href="https://linkedin.com/rodrigoess" class="nav-link"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/rodrigoess" class="nav-link">GitHub</a>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <!-- Hero/About Me Section -->
-    <section
-      id="about"
-      class="hero-section d-flex align-items-center justify-content-center vh-100"
-    >
-      <div class="container text-center">
-        <h1 class="display-4">Olá, eu sou Rodrigo Silva</h1>
-        <p class="lead">Desenvolvedor apaixonado por tecnologia e inovação.</p>
-        <a href="#experience" class="btn btn-primary btn-lg">Ver Experiência</a>
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <p class="greeting">Olá, sou o Rodrigo Silva.</p>
+        <p></p>
+        <p class="about-text">
+          Sou um desenvolvedor apaixonado por tecnologia e inovação. Com
+          experiência em várias linguagens de programação e projetos
+          desafiadores, estou sempre em busca de novas oportunidades para
+          aprender e crescer profissionalmente. Aqui você pode conhecer um pouco
+          mais sobre minha trajetória, habilidades e projetos que desenvolvi.
+        </p>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-5">
+    <!-- Skills Section -->
+    <section class="skills-section">
       <div class="container">
-        <h2 class="text-center mb-5">Experiência</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Linguagens de Programação</h3>
-            <ul>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>C++</li>
-            </ul>
+        <h2>skills</h2>
+        <div class="skills-list">
+          <div class="skill-item">
+            <img
+              src="https://img.icons8.com/color/48/000000/python.png"
+              alt="Python"
+            />
+            <span>Python</span>
           </div>
-          <div class="col-md-6">
-            <h3>Onde Trabalhei</h3>
-            <ul>
-              <li>Empresa A - Desenvolvedor Backend</li>
-              <li>Empresa B - Analista de Sistemas</li>
-              <li>Freelancer - Projetos Web</li>
-            </ul>
+          <div class="skill-item">
+            <img
+              src="https://img.icons8.com/color/48/000000/javascript.png"
+              alt="JavaScript"
+            />
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <img
+              src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"
+              alt="Java"
+            />
+            <span>Java</span>
+          </div>
+          <div class="skill-item">
+            <img
+              src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
+              alt="C++"
+            />
+            <span>C++</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
+    <section class="projects-section">
       <div class="container">
-        <h2 class="text-center mb-5">Projetos</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Projeto 1</h5>
-                <p class="card-text">Descrição breve do projeto.</p>
-                <a href="#" class="btn btn-primary">Ver Projeto</a>
-              </div>
-            </div>
+        <h2>projetos</h2>
+        <div class="projects-list">
+          <div class="project-item">
+            <img
+              src="https://img.icons8.com/color/48/000000/project.png"
+              alt="Projeto 1"
+            />
+            <span>Projeto 1</span>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Projeto 2</h5>
-                <p class="card-text">Descrição breve do projeto.</p>
-                <a href="#" class="btn btn-primary">Ver Projeto</a>
-              </div>
-            </div>
+          <div class="project-item">
+            <img
+              src="https://img.icons8.com/color/48/000000/project.png"
+              alt="Projeto 2"
+            />
+            <span>Projeto 2</span>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Projeto 3</h5>
-                <p class="card-text">Descrição breve do projeto.</p>
-                <a href="#" class="btn btn-primary">Ver Projeto</a>
-              </div>
-            </div>
+          <div class="project-item">
+            <img
+              src="https://img.icons8.com/color/48/000000/project.png"
+              alt="Projeto 3"
+            />
+            <span>Projeto 3</span>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-5">Contacto</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" />
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Mensagem</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <h3>Redes Sociais</h3>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-decoration-none">LinkedIn</a></li>
-              <li><a href="#" class="text-decoration-none">GitHub</a></li>
-              <li><a href="#" class="text-decoration-none">Twitter</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-      <div class="container">
-        <p>&copy; 2023 Rodrigo Silva. Todos os direitos reservados.</p>
-      </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
