@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 body {
-  font-family: "Lora", Source Sans Pro;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 18px;
   color: #fff;
@@ -16,7 +16,7 @@ body {
   background-color: #1976d2;
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
 }
 
 .header .container {
@@ -25,20 +25,8 @@ body {
 
 .social-links {
   display: flex;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   gap: 1rem;
-}
-
-/* About Section */
-.about-section {
-  padding: 5rem 0;
-  border-bottom: 2px solid white;
-}
-
-.about-section h2 {
-  font-weight: 300;
-  margin-bottom: 2rem;
-  text-align: left;
 }
 
 .greeting {
@@ -46,6 +34,29 @@ body {
   line-height: 1.5;
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: white;
+}
+
+.about-section h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .about-text {
@@ -58,14 +69,27 @@ body {
 /* Skills Section */
 .skills-section {
   background-color: #1976d2;
-  padding: 5rem 0;
+  padding: 0.5rem 0;
   color: #ffffff;
-  border-bottom: 2px solid white;
+  position: relative;
+  padding-bottom: 4rem;
+  font-size: 1rem;
+}
+
+.skills-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: white;
 }
 
 .skills-section h2 {
-  font-weight: 300;
-  margin-bottom: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
   text-align: left;
 }
 
@@ -81,56 +105,151 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative; /* enable tooltip positioning */
 }
 
-.skill-item img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 0.5rem;
+.skill-item::after {
+  content: attr(data-skill);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.skill-item:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.skill-item i {
+  font-size: 42px;
+  color: white;
 }
 
 .skill-item span {
   font-weight: 300;
 }
 
-/* Projects Section */
+/* Experience Section */
+.experience-section {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.experience-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: white;
+}
+
+.experience-section h2 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  gap: 1rem;
+  justify-items: center; /* center card horizontally */
+}
+
+.experience-item {
+  width: 100%;
+  max-width: 320px;
+}
+
+.experience-item {
+  background-color: rgba(215, 21, 21, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.experience-item h3 {
+  font-size: 1.2rem;
+}
+
+.experience-item .date {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.25rem;
+}
+
+.experience-item .desc {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/* Underline the Website link inside Experience only */
+.experience-item .desc a {
+  text-decoration: underline;
+}
+
+/* Removed multi-column layout: keep a single centered column on all viewports */
+
 .projects-section {
-  padding: 5rem 0;
-  border-bottom: 2px solid white;
+  padding: 0.5rem 0;
+  position: relative;
+  padding-bottom: 4rem;
 }
 
 .projects-section h2 {
-  font-weight: 300;
-  margin-bottom: 2rem;
+  font-weight: bold;
   text-align: left;
 }
 
 .projects-list {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
 }
 
 .project-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  background-color: rgba(215, 21, 21, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
 }
 
-.project-item img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 0.5rem;
+.project-item h3 {
+  font-size: 1.2rem;
 }
 
-.project-item span {
-  font-weight: 300;
+.project-item .date {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.25rem;
+}
+
+.project-item .desc {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.project-item .desc a {
+  text-decoration: underline;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 /* Responsive Design */
@@ -151,4 +270,21 @@ h2 {
   .social-links {
     gap: 0.5rem;
   }
+}
+
+/* Footer */
+.site-footer {
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.7rem;
+}
+
+.site-footer .nav-link {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.site-footer .nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
 }

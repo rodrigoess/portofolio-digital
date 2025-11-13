@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -16,9 +20,9 @@
       <div class="container d-flex justify-content-between align-items-center">
         <div class="social-links">
           <a href="https://linkedin.com/rodrigoess" class="nav-link"
-            >LinkedIn</a
+            >LINKEDIN</a
           >
-          <a href="https://github.com/rodrigoess" class="nav-link">GitHub</a>
+          <a href="https://github.com/rodrigoess" class="nav-link">GITHUB</a>
         </div>
       </div>
     </header>
@@ -26,14 +30,23 @@
     <!-- About Section -->
     <section class="about-section">
       <div class="container">
-        <p class="greeting">Olá, sou o Rodrigo Silva.</p>
+        <p class="greeting">Olá, sou o Rodrigo Silva</p>
         <p></p>
         <p class="about-text">
-          Sou um desenvolvedor apaixonado por tecnologia e inovação. Com
-          experiência em várias linguagens de programação e projetos
-          desafiadores, estou sempre em busca de novas oportunidades para
-          aprender e crescer profissionalmente. Aqui você pode conhecer um pouco
-          mais sobre minha trajetória, habilidades e projetos que desenvolvi.
+          sou um estudante da área de informática apaixonado por tecnologia.
+          Vivo em Almada, Portugal e tenho alguma experiência em linguagens de
+          programação web com HTML, CSS, Javascript e algumas frameworks de
+          Javascript.
+        </p>
+        <p></p>
+        <p class="about-text">
+          Estou sempre em busca de novas oportunidades para aprender e crescer
+          profissionalmente.
+        </p>
+        <p></p>
+        <p class="about-text">
+          Aqui podes conhecer um pouco mais sobre as minhas habilidades,
+          experiências e projetos que desenvolvi.
         </p>
       </div>
     </section>
@@ -41,35 +54,48 @@
     <!-- Skills Section -->
     <section class="skills-section">
       <div class="container">
-        <h2>skills</h2>
+        <h2>SKILLS</h2>
         <div class="skills-list">
-          <div class="skill-item">
-            <img
-              src="https://img.icons8.com/color/48/000000/python.png"
-              alt="Python"
-            />
-            <span>Python</span>
+          <div class="skill-item" data-skill="HTML">
+            <i class="ri-html5-fill" aria-hidden="true"></i>
           </div>
-          <div class="skill-item">
-            <img
-              src="https://img.icons8.com/color/48/000000/javascript.png"
-              alt="JavaScript"
-            />
-            <span>JavaScript</span>
+          <div class="skill-item" data-skill="CSS">
+            <i class="ri-css3-fill" aria-hidden="true"></i>
           </div>
-          <div class="skill-item">
-            <img
-              src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"
-              alt="Java"
-            />
-            <span>Java</span>
+          <div class="skill-item" data-skill="JavaScript">
+            <i class="ri-javascript-fill" aria-hidden="true"></i>
           </div>
-          <div class="skill-item">
-            <img
-              src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-              alt="C++"
-            />
-            <span>C++</span>
+          <div class="skill-item" data-skill="Java">
+            <i class="ri-cup-fill" aria-hidden="true"></i>
+          </div>
+          <div class="skill-item" data-skill="Bootstrap">
+            <i class="ri-bootstrap-fill" aria-hidden="true"></i>
+          </div>
+          <div class="skill-item" data-skill="React">
+            <i class="ri-reactjs-fill" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+      <div class="container">
+        <h2>EXPERIÊNCIA</h2>
+        <div class="experience-list">
+          <div class="experience-item">
+            <h3 class="mb-0">Digiplanet</h3>
+            <div class="date">maio 2024 - julho 2024</div>
+            <p></p>
+            <div class="desc">
+              Digiplanet - Loja de informática (computadores
+              recondicionados).<br />
+              <a href="https://www.digiplanet.pt/" class="nav-link d-inline p-0"
+                >Website</a
+              ><br />
+              <p></p>
+              <strong>Estagiário</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -78,36 +104,57 @@
     <!-- Projects Section -->
     <section class="projects-section">
       <div class="container">
-        <h2>projetos</h2>
+        <h2>PROJETOS</h2>
         <div class="projects-list">
           <div class="project-item">
-            <img
-              src="https://img.icons8.com/color/48/000000/project.png"
-              alt="Projeto 1"
-            />
-            <span>Projeto 1</span>
-          </div>
-          <div class="project-item">
-            <img
-              src="https://img.icons8.com/color/48/000000/project.png"
-              alt="Projeto 2"
-            />
-            <span>Projeto 2</span>
-          </div>
-          <div class="project-item">
-            <img
-              src="https://img.icons8.com/color/48/000000/project.png"
-              alt="Projeto 3"
-            />
-            <span>Projeto 3</span>
+            <h3 class="mb-0">Nome do Projeto</h3>
+            <div class="date">Data do projeto</div>
+            <div class="desc">
+              Descrição do projeto.<br />
+              <a href="#" class="nav-link d-inline p-0">GitHub</a><br />
+              <strong>Tecnologias utilizadas</strong>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center text-center gap-2"
+      >
+        <p class="mb-0">
+          © <span id="year"></span> Rodrigo Silva. Built with
+          <a href="https://getbootstrap.com" class="nav-link d-inline p-0"
+            >Bootstrap</a
+          >
+          and using
+          <a href="https://remixicon.com/" class="nav-link d-inline p-0"
+            >remixicon</a
+          >.
+        </p>
+        <div class="footer-links d-flex align-items-center gap-3">
+          <a href="mailto:rodrigoessilva2008@gmail.com" class="nav-link p-0"
+            >Email</a
+          >
+          <a href="https://linkedin.com/rodrigoess" class="nav-link p-0"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/rodrigoess" class="nav-link p-0"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+      // Set current year in footer without depending on script.js
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
