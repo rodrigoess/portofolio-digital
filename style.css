@@ -19,14 +19,11 @@ body {
   border-bottom: 1px solid white;
 }
 
-.header .container {
-  justify-content: flex-end !important;
-}
-
 .social-links {
   display: flex;
   font-size: 0.9rem;
   gap: 1rem;
+  padding-right: 3rem;
 }
 
 .greeting {
@@ -178,6 +175,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .experience-item h3 {
@@ -194,14 +198,6 @@ body {
   font-size: 0.9rem;
   line-height: 1.2;
 }
-
-/* Underline the Website link inside Experience only */
-.experience-item .desc a {
-  text-decoration: underline;
-}
-
-/* Removed multi-column layout: keep a single centered column on all viewports */
-
 .projects-section {
   padding: 0.5rem 0;
   position: relative;
@@ -227,6 +223,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-item h3 {
@@ -242,10 +245,6 @@ body {
 .project-item .desc {
   font-size: 0.9rem;
   line-height: 1.2;
-}
-
-.project-item .desc a {
-  text-decoration: underline;
 }
 
 h2 {
